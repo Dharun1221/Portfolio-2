@@ -43,6 +43,19 @@ nav {
     gap: 1rem;
 }
 
+nav svg {
+    display: none;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    color: #f4f4ff;
+}
+
+.hamburg,
+.cancel {
+    display: none;
+}
+
 .logo a {
     font-size: 1.5rem;
     font-weight: 900;
@@ -583,6 +596,32 @@ footer {
     .contact-form {
         width: 100%;
     }
+
+    .hero-section {
+        padding: 4.5rem 1.5rem 5rem;
+    }
+
+    .main-content h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+
+    .quick-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .quick-links a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .about-card,
+    .project-card,
+    .experience-card,
+    .hire-card,
+    .contact-form {
+        padding: 1.8rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -602,7 +641,8 @@ footer {
         display: none;
     }
 
-    nav svg {
+    .hamburg,
+    .cancel {
         display: block;
     }
 
@@ -632,6 +672,13 @@ footer {
 
     .dropmenu {
         transform: translateY(-320px);
+    }
+
+    .card-icon,
+    .project-card .card-icon,
+    .hire-card .card-icon {
+        width: 48px;
+        height: 48px;
     }
 }
 
@@ -670,5 +717,76 @@ footer {
     .project-grid,
     .contact-section .hire-content {
         gap: 1.2rem;
+    }
+}
+
+@media (max-width: 420px) {
+    nav {
+        padding: 0.85rem 1rem;
+    }
+
+    .hero-section {
+        padding: 3.5rem 1rem 4rem;
+    }
+
+    .main-content h1 {
+        font-size: 2rem;
+    }
+
+    .main-content p,
+    .section-heading p,
+    .project-card p,
+    .experience-card p,
+    .about-card p,
+    .info-block p,
+    .hire-card p {
+        font-size: 0.95rem;
+    }
+
+    .section {
+        padding: 3.5rem 1rem;
+    }
+
+    .section-heading h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-image img,
+    .about-image {
+        max-height: 260px;
+    }
+
+    .hero-section .content,
+    .about-section .section-content,
+    .hire-section .hire-content,
+    .contact-section .hire-content {
+        grid-template-columns: 1fr !important;
+    }
+
+    .project-card,
+    .experience-card,
+    .about-card,
+    .hire-card,
+    .contact-form {
+        padding: 1.2rem;
+    }
+
+    .project-card h3,
+    .experience-card h3,
+    .hire-card h3,
+    .info-block h4 {
+        font-size: 1rem;
+    }
+
+    .quick-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .quick-links a,
+    .contact-form button,
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
     }
 }
